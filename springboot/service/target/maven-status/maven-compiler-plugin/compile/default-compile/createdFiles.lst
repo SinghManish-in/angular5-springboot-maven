@@ -1,0 +1,4 @@
+com/singh/app/Application.class
+com/singh/service/impl/UserServiceImpl.class
+com/singh/controller/UserController.class
+com/singh/service/UserService.class

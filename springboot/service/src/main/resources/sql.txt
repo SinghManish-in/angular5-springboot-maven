@@ -1,0 +1,17 @@
+use singh;
+
+CREATE TABLE users(ID int NOT NULL auto_increment,
+FIRST_NAME varchar(20) NOT NULL,
+LAST_NAME varchar(20) NOT NULL,
+EMAIL varchar(50) NOT NULL, 
+CUSTOMER_PASSWORD varchar(20) NOT NULL,
+GENDER varchar(10) NOT NULL,
+DOB Date NOT NULL,
+UNIQUE(EMAIL),
+PRIMARY KEY (ID)
+);
+
+INSERT INTO USERS VALUES(1,'MANISH','SINGH','ms@gmail.com','patna','male','1983-08-26');
+
+
+commit;

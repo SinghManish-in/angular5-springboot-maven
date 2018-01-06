@@ -1,0 +1,82 @@
+<div class="register">
+  <br>
+  <div class="row">
+    <br>
+    <br>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-4">
+      <h1>Create a new account</h1>
+      <h3>It's free and always will be.</h3>
+    </div>
+    <div class="col-md-2"></div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-2 horizontalFormSpacer">
+      <input #firstName type="text" class="form-control input-sm" placeholder="First name" [(ngModel)]="registerUser.firstName"
+        [ngClass]="{'inValid': !firstNameValid}" (keyup)="isFirstNameValid()">
+    </div>
+    <div class="col-md-2 horizontalFormSpacer">
+      <input #lastName type="text" class="form-control input-sm" placeholder="Surname" [(ngModel)]="registerUser.lastName"
+      [ngClass]="{'inValid': !lastNameValid}" (keyup)="isLastNameValid()">
+    </div>
+    <div class="col-md-2"></div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-4 horizontalFormSpacer">
+      <input #email type="text" class="form-control input-sm" placeholder="Email address" [(ngModel)]="registerUser.email" 
+      [ngClass]="{'inValid': !emailValid}" (keyup)="isEmailValid()">
+    </div>
+    <div class="col-md-2"></div>
+
+
+    <div class="col-md-6" [hidden]="hideReEnterEmail"></div>
+    <div class="col-md-4 horizontalFormSpacer" [hidden]="hideReEnterEmail">
+      <input #reEnterEmail type="text" class="form-control input-sm" placeholder="Re-enter email address" [(ngModel)]="registerUser.reEnterEmail"
+      [hidden]="hideReEnterEmail" [ngClass]="{'inValid': !reEnterEmailValid}" (keyup)="isReEnterEmailValid()">
+    </div>
+    <div class="col-md-2" [hidden]="hideReEnterEmail"></div>
+
+
+    <div class="col-md-6"></div>
+    <div class="col-md-4 horizontalFormSpacer">
+      <input type="password" class="form-control input-sm" placeholder="New password" [(ngModel)]="registerUser.password"
+      [ngClass]="{'inValid': !passwordValid}" (keyup)="isPasswordValid()">
+    </div>
+    <div class="col-md-2"></div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-4 registerFont"> Birthday</div>
+    <div class="col-md-2"></div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-2 horizontalFormSpacer">
+      <input type="date" class="form-control input-sm" placeholder="New password" [(ngModel)]="registerUser.dateOfBirth">
+    </div>
+    <div class="col-md-4"></div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-4 registerFont">
+      <input type="radio" value="male" name="gender" [(ngModel)]="registerUser.gender"> Male
+      <input type="radio" value="female" name="gender" [(ngModel)]="registerUser.gender"> Female
+    </div>
+    <div class="col-md-2"></div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-3 termsCondition">
+        By clicking Create Account, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy. You may receive SMS message notifications from Facebook and can opt out at any time.
+    </div>
+    <div class="col-md-3"></div>
+
+    
+
+    <div class="col-md-6"></div>
+    <div class="col-md-4">
+      <B>
+        <button class="input-sm registerButton" (click)=register()>Create Account</button>
+      </B>
+    </div>
+    <div class="col-md-2"></div>
+
+  </div>
+</div>
